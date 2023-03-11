@@ -1,0 +1,21 @@
+spring:
+  mvc:
+    pathmatch:
+      matching-strategy: ant_path_matcher  #因为Springfox使用的路径匹配是基于AntPathMatcher的，而Spring Boot 2.6.X使用的是PathPatternMatcher。
+  datasource:
+    username: root
+    password: 15935728qaz
+    url: jdbc:mysql://localhost:3306/review?useSSL=false&serverTimezone=UTC
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+  redis:
+    url: redis://www.mjorkj.top:6379
+
+
+mybatis-plus:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+    map-underscore-to-camel-case: true
+  global-config:
+    db-config:
+      id-type: assign_id
